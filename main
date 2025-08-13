@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Brand — One‑page Starter</title>
+  <meta name="description" content="A clean, fast one-page website template. Replace copy and colors to make it yours.">
+  <style>
+    :root{
+      --bg:#0f172a;        /* slate-900 */
+      --panel:#111827;     /* gray-900 */
+      --text:#e5e7eb;      /* gray-200 */
+      --muted:#94a3b8;     /* slate-400 */
+      --accent:#22c55e;    /* green-500 */
+      --accent-2:#38bdf8;  /* sky-400 */
+      --max:1100px;
+      --radius:14px;
+      --shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(56,189,248,.15), transparent 60%),
+                  radial-gradient(800px 500px at 10% 10%, rgba(34,197,94,.10), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--accent-2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: blur(8px);
+      background: rgba(15,23,42,.6);
+      border-bottom:1px solid rgba(148,163,184,.15);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      min-height:64px;gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .logo{
+      width:28px;height:28px;border-radius:8px;
+      background: conic-gradient(from 180deg at 50% 50%, var(--accent), var(--accent-2));
+      box-shadow:0 6px 20px rgba(34,197,94,.35);
+    }
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--text);opacity:.85}
+    .btn{
+      display:inline-block;background:var(--accent);color:#052e16;
+      padding:12px 18px;border-radius:12px;font-weight:700;box-shadow:var(--shadow);
+      transition:transform .08s ease, box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.secondary{background:transparent;color:var(--text);border:1px solid rgba(148,163,184,.25);box-shadow:none}
+    .hero{
+      padding:80px 0 40px;
+    }
+    .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+    .eyebrow{color:var(--accent-2);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem}
+    h1{font-size:clamp(2rem, 3vw + 1rem, 3.2rem);line-height:1.1;margin:8px 0 16px}
+    .lead{color:var(--muted);font-size:1.05rem;margin-bottom:24px}
+    .panel{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+      border:1px solid rgba(148,163,184,.18);
+      border-radius:var(--radius);box-shadow:var(--shadow);
+    }
+    .showcase{
+      padding:24px;background:radial-gradient(600px 240px at 80% -10%, rgba(56,189,248,.12), transparent 60%), var(--panel);
+      min-height:260px;
+    }
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+    .badge{padding:8px 12px;border-radius:9999px;background:rgba(148,163,184,.12);border:1px solid rgba(148,163,184,.2);font-size:.9rem}
+    section{padding:56px 0}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3, 1fr)}
+    .card{padding:20px}
+    h2{font-size:1.6rem;margin:0 0 10px}
+    .kicker{color:var(--muted);margin-top:-8px}
+    .testimonial{font-style:italic;color:#cbd5e1}
+    .contact form{display:grid;gap:12px}
+    input, textarea{
+      width:100%;padding:12px 14px;border-radius:12px;background:#0b1221;color:var(--text);
+      border:1px solid rgba(148,163,184,.22);outline:none
+    }
+    input:focus, textarea:focus{border-color:var(--accent-2);box-shadow:0 0 0 3px rgba(56,189,248,.15)}
+    footer{padding:28px 0;color:var(--muted);border-top:1px solid rgba(148,163,184,.15)}
+    .mobile-toggle{display:none}
+    @media (max-width: 900px){
+      .hero .wrap{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      nav ul{display:none}
+      .mobile-toggle{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;border:1px solid rgba(148,163,184,.25);background:transparent;color:var(--text)}
+      .mobile-open nav ul{
+        position:absolute;left:0;right:0;top:64px;
+        background:rgba(15,23,42,.98);display:flex;flex-direction:column;gap:0;border-bottom:1px solid rgba(148,163,184,.15)
+      }
+      .mobile-open nav li a{display:block;padding:14px 20px}
+    }
+    html{scroll-behavior:smooth}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Your Brand</span>
+      </div>
+      <nav aria-label="Primary">
+        <button class="mobile-toggle" aria-label="Toggle menu" id="menuBtn">☰</button>
+        <ul id="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="btn" href="#contact">Get started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <div class="eyebrow">Launch fast. Look sharp.</div>
+          <h1>Make a strong first impression with a clean, modern one‑pager</h1>
+          <p class="lead">Perfect for a portfolio, product teaser, or local service. Built for speed, accessibility, and easy customization.</p>
+          <div class="badges">
+            <span class="badge">Responsive</span>
+            <span class="badge">SEO‑ready</span>
+            <span class="badge">Vanilla HTML/CSS/JS</span>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:6px">
+            <a class="btn" href="#contact">Request a quote</a>
+            <a class="btn secondary" href="#features">See features</a>
+          </div>
+        </div>
+        <div class="panel showcase" aria-label="Showcase">
+          <!-- Replace this with a real image or illustration -->
+          <svg viewBox="0 0 600 320" width="100%" height="100%" role="img" aria-label="Sample UI mock">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#22c55e"/><stop offset="1" stop-color="#38bdf8"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="600" height="320" fill="url(#g)" opacity=".12"/>
+            <rect x="40" y="40" rx="12" width="520" height="36" fill="#0b1221" stroke="#2e3b52"/>
+            <rect x="40" y="96" rx="12" width="340" height="160" fill="#0b1221" stroke="#2e3b52"/>
+            <rect x="396" y="96" rx="12" width="164" height="74" fill="#0b1221" stroke="#2e3b52"/>
+            <rect x="396" y="182" rx="12" width="164" height="74" fill="#0b1221" stroke="#2e3b52"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <h2>Features that matter</h2>
+        <p class="kicker">No bloat. Everything you need to look professional.</p>
+        <div class="grid cols-3">
+          <div class="panel card">
+            <h3>Fast by default</h3>
+            <p>Lightweight styles and zero dependencies keep load times snappy on any connection.</p>
+          </div>
+          <div class="panel card">
+            <h3>Mobile‑first</h3>
+            <p>Layouts adapt seamlessly from small phones to large desktops.</p>
+          </div>
+          <div class="panel card">
+            <h3>Easy to edit</h3>
+            <p>Change colors, text, and sections quickly using simple CSS variables.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About your brand</h2>
+        <p class="kicker">Share what you do and why it matters.</p>
+        <div class="panel card">
+          <p>Replace this with your story. Who you help, how you’re different, and the outcome you deliver. Keep it concrete and human.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <h2>Selected work</h2>
+        <p class="kicker">A few highlights to build trust.</p>
+        <div class="grid cols-3">
+          <div class="panel card">
+            <strong>Project A</strong>
+            <p class="kicker">Short win-focused description.</p>
+            <p>What you solved and the result in plain language.</p>
+          </div>
+          <div class="panel card">
+            <strong>Project B</strong>
+            <p class="kicker">Short win-focused description.</p>
+            <p>Make outcomes measurable if possible.</p>
+          </div>
+          <div class="panel card">
+            <strong>Project C</strong>
+            <p class="kicker">Short win-focused description.</p>
+            <p>Link to a case study later when you expand.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Let’s work together</h2>
+        <p class="kicker">Tell me a bit about your project and timeline.</p>
+        <div class="panel card">
+          <form id="contactForm">
+            <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="What do you want to build?" required></textarea>
+            </div>
+            <button class="btn" type="submit">Send message</button>
+            <p style="color:var(--muted);margin:8px 0 0;font-size:.9rem">Or email: hello@yourbrand.com</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <span>© <span id="year"></span> Your Brand</span>
+      <span><a href="#about">About</a> • <a href="#features">Features</a> • <a href="#contact">Contact</a></span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const html = document.documentElement;
+    btn?.addEventListener('click', () => {
+      document.body.classList.toggle('mobile-open');
+      const open = document.body.classList.contains('mobile-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Close menu on nav click (mobile)
+    document.getElementById('menu')?.addEventListener('click', (e) => {
+      if(e.target.tagName === 'A') document.body.classList.remove('mobile-open');
+    });
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Fake form submit
+    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thanks! This demo does not send emails. Hook it up to Formspree, Netlify Forms, or your backend.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
